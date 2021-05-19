@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>THRIVE</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+	<link rel="stylesheet" href={{url_for('static',filename='style.css')}}>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.html"><img src="./static/img/logo.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link active" href="index.html">HOME</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="/dashboard">DASHBOARD</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/predict">PREDICTOR</a>
+			</li>
+		</ul>
+	</div>
+	</div>
+
+</nav>
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1" ></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="./static/img/rainfall5.jpg">
+			<div class="corousel-caption">
+				<h1 class="display-2">THRIVE</h1>
+				<h3>Recreating weather</h3>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="./static/img/rainfall7.jpg">
+			<div class="corousel-caption">
+				<h1 class="display-2">LET'S KNOW WILL IT RAIN TOMMOROW</h1>
+				<h3>WITH AN ACCURACY OF 90.5%</h3>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+<div class="row jumbotron text-center">
+	<div class="col-lg-7 col-xl-8 pt-4">
+		<h4>See the Dataset used from Kaggle!</h4>
+	</div>
+	<div class="col-lg-5 col-xl-4">
+		<a href="https://www.kaggle.com/jsphyg/weather-dataset-rattle-package" target="_blank" class="btn btn-secondary btn-lg">Rain in Australia</a>
+	</div>
+</div>
+</div>
+
+<!--- Welcome Section -->
+
+
+<!--- Three Column Section -->
+
+
+<!--- Two Column Section -->
+<div class="container-fluid">
+	<div class="row my=5 mx=3">
+		<div class="col-lg-6">
+			<h2 class="pb-3">Feature list in order to use THRIVE's Predictor</h2>
+			<p>
+				<ul>
+					<li><b>Location</b> - The common name of the location of the weather station</li>
+					<li><b>Minimum Temperature</b> - The minimum temperature in degrees celsius</li>
+					<li><b>Maximum Temperature</b> - The maximum temperature in degrees celsius</li>
+					<li><b>Rainfall</b> - The amount of rainfall recorded for the day in mm</li>
+					<li><b>Evaporation</b> -The so-called Class A pan evaporation (mm) in the 24 hours to 9am</li>
+					<li><b>Sunshine</b> - The number of hours of bright sunshine in the day.</li>
+					<li><b>Wind Gust Direction</b> - The direction of the strongest wind gust in the 24 hours to midnight</li>
+					<li><b>Wind Gust Speed</b> - The speed (km/h) of the strongest wind gust in the 24 hours to midnight</li>
+					<li><b>Wind Direction at 9 am</b> - Direction of the wind at 9am</li>
+					<li><b>Wind Direction at 3 pm</b> - Direction of the wind at 3pm</li>
+					<li><b>Wind Speed at 9 am</b> - Wind speed (km/hr) averaged over 10 minutes prior to 9am</li>
+					<li><b>Wind Speed at 3 pm</b> - Wind speed (km/hr) averaged over 10 minutes prior to 3pm</li>
+					<li><b>Humidity at 3 pm</b> - Humidity (percent) at 3pm</li>
+					<li><b>Pressure at 9 am</b> - Atmospheric pressure (hpa) reduced to mean sea level at 9am</li>
+					<li><b>Pressure at 3 pm</b> - Atmospheric pressure (hpa) reduced to mean sea level at 3pm</li>
+					<li><b>Cloud at 9 am</b> - Fraction of sky obscured by cloud at 9am. This is measured in "oktas", which are a unit of eigths. It records how many</li>
+					<li><b>Cloud at 3 pm</b>  - Fraction of sky obscured by cloud (in "oktas": eighths) at 3pm. See Cload9am for a description of the values</li>
+					<li><b>RainToday</b>  - Boolean: 1 if precipitation (mm) in the 24 hours to 9am exceeds 1mm, otherwise 0</li>
+				</ul>
+		</p>
+		
+		</div>
+		<div class="col-lg-6">
+			<br><br><br><br><br><br><br><br><br><br>			
+			<img src="./static/img/Australia.jpg">
+		</div>
+
+		</div>
+	</div>
+</div>
+
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed">
+		</div>
+	</div>
+</figure>
+
+<!--- Two Column Section -->
+<div class="container-fluid">
+	<div class="row text-center">
+		<div class="col-12">
+			<br>
+			<video loop width="400" height="320" autoplay muted>
+				<source src="./static/img/thriver.mp4" type="video/mp4">
+			     Your browser does not support the video tag.
+			</video>	
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+<!--- Connect -->
+<div class="container-fluid">
+	<div class="row text-center">
+		<div class="col-12">
+			<h2>PEEK INTO THE SOURCE CODE</h2>
+		</div>
+		<div class="col-12 social">
+			<a href="https://github.com/Chhavi-Trivedi/dry_spell" target="_blank"><i class="fab fa-github"></i></a>
+		</div>
+	</div>
+</div>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid">
+		<div class="row text-center">
+			<div class="col-12">
+				<hr class="socket">
+				<h5>THRIVE</h5>
+			</div>
+
+		</div>
+
+	</div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
