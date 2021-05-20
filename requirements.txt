@@ -19,7 +19,6 @@ sklearn==0.0
 threadpoolctl==2.1.0
 wincertstore==0.2
 xgboost==1.4.2
-Flask==1.1.1
 argon2-cffi==20.1.0
 async-generator==1.10
 attrs==20.3.0
