@@ -72,10 +72,11 @@ def predict():
 		output = pred
 
 		if(pred.mean()>0.5):
-			return render_template("sunny.html")
+			return render_template("rainy.html")
 
 		else:
-			return render_template("rainy.html")
+			return render_template("sunny.html")
+			
 			
 	return render_template("predictor.html")
 
